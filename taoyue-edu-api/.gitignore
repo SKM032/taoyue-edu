@@ -1,0 +1,27 @@
+# ===== 环境变量与密钥（务必忽略，防止泄露商户密钥） =====
+.env
+.env.local
+.env.production
+
+# ===== 商户证书/私钥（绝对不要提交） =====
+certs/
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 数据库/日志
+*.log
+*.sqlite3
+
+# 编辑器
+.idea/
+.vscode/
+.DS_Store
+
+# 部署/构建产物
+static/uploads/

@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a2e;
+    background: #fafafa;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium py-2.5 px-6 rounded-full hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300;
+  }
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-500 font-medium py-2.5 px-6 rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4;
+  }
+  .section-subtitle {
+    @apply text-gray-500 text-center mb-12 max-w-2xl mx-auto;
+  }
+}
+
+/* 富文本内容（课程简介等） */
+.rich-text {
+  font-size: 15px;
+  line-height: 1.8;
+  word-break: break-word;
+}
+.rich-text p {
+  margin-bottom: 0.75rem;
+}
+.rich-text img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0.75rem 0;
+}
+.rich-text h1,
+.rich-text h2,
+.rich-text h3,
+.rich-text h4 {
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+}
+.rich-text ul,
+.rich-text ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.rich-text a {
+  color: #00c4d4;
+  text-decoration: underline;
+}
+.rich-text table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+.rich-text blockquote {
+  border-left: 3px solid #e2e2e2;
+  padding-left: 0.75rem;
+  color: #6b7280;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
