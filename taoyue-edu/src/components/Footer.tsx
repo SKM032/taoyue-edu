@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-10 pt-8 text-center text-sm text-white/30">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <p>&copy; 2025 桃悦智科 TaoYue Tech. All rights reserved.</p>
+            <p>&copy; 2026 桃悦智科 TaoYue Tech. All rights reserved.</p>
             <div className="flex gap-6 items-center">
               <Link href="/privacy" className="hover:text-white/60 transition-colors">隐私政策</Link>
               <Link href="/terms" className="hover:text-white/60 transition-colors">服务协议</Link>
