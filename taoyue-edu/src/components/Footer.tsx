@@ -17,9 +17,28 @@ export default function Footer() {
               专注IT技能·AI全媒体·跨境电商的实战教育平台，已服务50000+学员实现职业进阶。
             </p>
             <div className="flex gap-3">
-              {['微信', '微博', '知乎'].map((s, i) => (
-                <span key={i} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs cursor-pointer hover:bg-[#00C4D4] transition-colors">{s[0]}</span>
-              ))}
+              {/* 社交入口：显示完整名称；微信无公开主页故保留文字，微博/知乎链接到官方平台 */}
+              {[
+                { name: '微信', href: '' },
+                { name: '微博', href: 'https://weibo.com' },
+                { name: '知乎', href: 'https://www.zhihu.com' },
+              ].map((s, i) =>
+                s.href ? (
+                  <a
+                    key={i}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={s.name}
+                    aria-label={s.name}
+                    className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs cursor-pointer hover:bg-[#00C4D4] transition-colors"
+                  >
+                    {s.name}
+                  </a>
+                ) : (
+                  <span key={i} title={s.name} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs cursor-pointer hover:bg-[#00C4D4] transition-colors">{s.name}</span>
+                )
+              )}
             </div>
           </div>
 
@@ -71,7 +90,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-10 pt-8 text-center text-sm text-white/30">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <p>&copy; 2025 桃悦智科 TaoYue Tech. All rights reserved.</p>
+            <p>&copy; 2026 桃悦智科 TaoYue Tech. All rights reserved.</p>
             <div className="flex gap-6 items-center">
               <Link href="/privacy" className="hover:text-white/60 transition-colors">隐私政策</Link>
               <Link href="/terms" className="hover:text-white/60 transition-colors">服务协议</Link>
